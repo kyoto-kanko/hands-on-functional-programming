@@ -2,6 +2,8 @@ package com.example.hands_on_functional_programming;
 
 import com.example.hands_on_functional_programming.Interface.BiFunction;
 import com.example.hands_on_functional_programming.Interface.Function;
+import com.example.hands_on_functional_programming.Interface.Supplier;
+import com.example.hands_on_functional_programming.Model.Example;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
@@ -11,6 +13,8 @@ public class HandsOnFunctionalProgrammingApplication {
         FunctionExample();
 
         BiFunctionExample();
+
+        Supplier();
     }
 
     private static void FunctionExample() {
@@ -31,5 +35,10 @@ public class HandsOnFunctionalProgrammingApplication {
         // 2つの数字を受け取り、掛け算をする関数を作成する例
         BiFunction<Integer, Integer, Integer> multiplyInt = (i, j) -> i * j;
         System.out.println(multiplyInt.apply(3, 4));
+    }
+
+    private static void Supplier() {
+        Supplier<Example> supplier = () -> Example.ToExample("Taro", 20);
+        System.out.println(supplier.get());
     }
 }
