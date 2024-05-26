@@ -38,6 +38,7 @@ public class HandsOnFunctionalProgrammingApplication {
     }
 
     private static void Supplier() {
+        // インスタンスを生成するSupplierを作成する例(ロジックはクラス内に隠蔽)
         Supplier<Example> supplier = () -> Example.ToExample("Taro", 20);
         System.out.println(supplier.get());
     }

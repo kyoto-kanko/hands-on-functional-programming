@@ -11,6 +11,7 @@ public class Example {
     private final int age;
 
     public static Example ToExample(String name, int age) {
+        // ファクトリメソッドはstaticメソッドからインスタンスを生成するもの
         if (age == 20) {
             System.out.println("インスタンス化成功");
             return new Example(name, age);
